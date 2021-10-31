@@ -4,8 +4,10 @@ function pobierzliczbe(){
  
     a = parseInt(a);
     b = parseInt(b);
- 
-    return a ,b;
+
+    let ab = [a, b];
+
+    return ab;
 }
  
 const dodawanie = document.querySelector('#dodawanie');
@@ -17,6 +19,9 @@ const potegowanie = document.querySelector('#potegowanie');
 let wynik = document.querySelector('#wynik');
  
 dodawanie.addEventListener('click', ()=>{
-    pobierzliczbe();
+    let ab = pobierzliczbe();
+    let a = ab[0];
+    let b = ab[1];
+
     wynik.innerText = "Wynik: " + (a + b);
 })
