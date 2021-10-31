@@ -1,13 +1,9 @@
-function pobierzliczbe(){
-    let a = document.querySelector('#liczbaA').value;
-    let b = document.querySelector('#liczbaB').value;
- 
-    a = parseInt(a);
-    b = parseInt(b);
+let a = 0;
+let b = 0;
 
-    let ab = [a, b];
-
-    return ab;
+function pobierzLiczbe(){
+    a = parseInt(document.querySelector('#liczbaA').value);
+    b = parseInt(document.querySelector('#liczbaB').value);
 }
  
 const dodawanie = document.querySelector('#dodawanie');
@@ -19,9 +15,8 @@ const potegowanie = document.querySelector('#potegowanie');
 let wynik = document.querySelector('#wynik');
  
 dodawanie.addEventListener('click', ()=>{
-    let ab = pobierzliczbe();
-    let a = ab[0];
-    let b = ab[1];
-
+    pobierzLiczbe();
     wynik.innerText = "Wynik: " + (a + b);
+
+    console.log(a, b);
 })
